@@ -1,0 +1,18 @@
+<%# Affiche un message de type "notice" %>
+<% if notice %>
+  <div class="alert alert-info alert-dismissible fade show m-1" role="alert">
+    <%# Bouton pour fermer l'alerte manuellement %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <%# Le contenu du message notice %>
+    <%= notice %>
+  </div>
+<% end %>
+<%# Affiche un message de type "alert" %>
+<% if alert %>
+  <div class="alert alert-warning alert-dismissible fade show m-1" role="alert">
+    <%# Bouton pour fermer l'alerte manuellement %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <%# Le contenu du message alert %>
+    <%= alert %>
+  </div>
+<% end %>
