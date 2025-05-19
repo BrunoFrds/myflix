@@ -73,4 +73,6 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
+  # Nécessaire pour générer les liens dans les e-mails envoyés par Devise (ex : confirmation, reset password)
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
