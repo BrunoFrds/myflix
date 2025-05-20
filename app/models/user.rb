@@ -9,4 +9,7 @@ class User < ApplicationRecord
 
   has_many :reviews, dependent: :destroy
   has_many :reviewed_movies, through: :reviews, source: :movie
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 end
