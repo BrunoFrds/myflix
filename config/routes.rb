@@ -8,4 +8,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root to: "pages#home"
+
+  resources :movies, only: %i[index show] do
+    resources :bookmarks, only: [:create]
+    resources :reviews, only: %i[create update destroy]
+  end
+
+  resources :bookmarks, only: [:destroy]
+
+  resources :genres, only: %i[index show]
 end
